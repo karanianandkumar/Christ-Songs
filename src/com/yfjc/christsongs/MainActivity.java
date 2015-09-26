@@ -21,6 +21,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View; 
 import android.view.ViewParent;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView; 
 import android.widget.ArrayAdapter; 
 import android.widget.ListView; 
@@ -88,11 +90,18 @@ public class MainActivity extends Activity implements OnItemClickListener {
       String result[]=str.split(",");
     adapter2= new ArrayAdapter<String>(MainActivity.this,  R.layout.activity_listview,result);
       lv2.setAdapter(adapter2);
-        
-       
+      // To Animate index of A..
+      
+      LayoutAnimationController controller 
+      = AnimationUtils.loadLayoutAnimation(
+        this, R.anim.list_layout_controller);
+     lv2.setLayoutAnimation(controller);
+     
         
         lv.setOnItemClickListener(this);
         lv2.setOnItemClickListener(new OnItemClickListener() {
+        	
+        	
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
                  
@@ -125,6 +134,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
     	String res[]=str.split(",");
     	adapter2= new ArrayAdapter<String>(MainActivity.this,  R.layout.activity_listview,res);
         lv2.setAdapter(adapter2);
+        LayoutAnimationController controller 
+        = AnimationUtils.loadLayoutAnimation(
+          this, R.anim.list_layout_controller);
+       lv2.setLayoutAnimation(controller);
 	}
     
 }

@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View; 
 import android.view.ViewParent;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView; 
@@ -97,6 +98,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
         this, R.anim.list_layout_controller);
      lv2.setLayoutAnimation(controller);
      
+   
         
         lv.setOnItemClickListener(this);
         lv2.setOnItemClickListener(new OnItemClickListener() {
@@ -138,6 +140,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
         = AnimationUtils.loadLayoutAnimation(
           this, R.anim.list_layout_controller);
        lv2.setLayoutAnimation(controller);
-	}
+       
+       }
     
 }

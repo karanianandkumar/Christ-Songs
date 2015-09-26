@@ -10,8 +10,10 @@ package com.yfjc.christsongs;
 public final class R {
     public static final class anim {
         public static final int animation=0x7f040000;
-        public static final int push_right_in=0x7f040001;
-        public static final int push_right_out=0x7f040002;
+        public static final int list_layout_controller=0x7f040001;
+        public static final int push_right_in=0x7f040002;
+        public static final int push_right_out=0x7f040003;
+        public static final int scale=0x7f040004;
     }
     public static final class array {
         public static final int Alphabets=0x7f070000;

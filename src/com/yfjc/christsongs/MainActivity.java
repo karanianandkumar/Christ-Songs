@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View; 
 import android.view.ViewParent;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
@@ -32,9 +33,11 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 
+
 public class MainActivity extends Activity implements OnItemClickListener {
 	TextView tv1;
 	ListView lv,lv2;
+	
 	
 	String songlis[]={};
 	int indexes[]={0,21,58,66,71,75,86,90,91,98,124,130,137,145,151,169,268,302,304,308,328,366,379,383,394,400,401,454};
@@ -45,6 +48,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
         
         
@@ -66,6 +70,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
         FontsOverride.setDefaultFont(this, "SANS_SERIF", "fonts/Mallanna.ttf");
         
        
+        //Adding AdMob...
+        
+        
+        
+        
         
         Locale locale = new Locale("te");
         Locale.setDefault(locale);

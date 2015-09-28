@@ -14,6 +14,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.AdapterView; 
 import android.widget.ArrayAdapter; 
+import android.widget.LinearLayout;
 import android.widget.ListView; 
 import android.widget.TextView; 
 import android.widget.Toast; 
@@ -45,6 +47,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	Typeface mfont;
 	Configuration config;
 	ArrayAdapter<String> adapter,adapter2;
+	LinearLayout ll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,8 +75,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
        
         //Adding AdMob...
         
-        
-        
+        ll=(LinearLayout)findViewById(R.id.adLayoutView);
+        if (isNetworkAvailable(getBaseContext())) {
+        	ll.setVisibility(LinearLayout.VISIBLE);
+            
+        } else {
+        	ll.setVisibility(LinearLayout.GONE);
+            
+        }
         
         
         Locale locale = new Locale("te");
@@ -136,6 +145,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
     }
     
 */
+    public boolean isNetworkAvailable(final Context context) {
+        final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
+        return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
+    }
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 		// TODO Auto-generated method stub

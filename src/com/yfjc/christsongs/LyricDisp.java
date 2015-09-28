@@ -27,7 +27,7 @@ public class LyricDisp extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.lyric_display);
 		int size=(int) getResources().getDimension(R.dimen.font_size);
-		Log.d("Font Size",""+size);
+		
 		overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
 		 Intent intent = getIntent();
 		    

@@ -47,13 +47,15 @@ public final class R {
         public static final int icon=0x7f020005;
     }
     public static final class id {
-        public static final int LogoImage=0x7f0a0005;
-        public static final int action_settings=0x7f0a0006;
+        public static final int LogoImage=0x7f0a0007;
+        public static final int action_settings=0x7f0a0008;
+        public static final int adLayoutView=0x7f0a0003;
+        public static final int adView=0x7f0a0004;
         public static final int label=0x7f0a0000;
         public static final int listView1=0x7f0a0001;
         public static final int listView2=0x7f0a0002;
-        public static final int scrollView1=0x7f0a0003;
-        public static final int textView1=0x7f0a0004;
+        public static final int scrollView1=0x7f0a0005;
+        public static final int textView1=0x7f0a0006;
     }
     public static final class layout {
         public static final int activity_listview=0x7f030000;

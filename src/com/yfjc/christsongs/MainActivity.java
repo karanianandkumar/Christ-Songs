@@ -34,9 +34,16 @@ import android.widget.TextView;
 import android.widget.Toast; 
 import android.widget.AdapterView.OnItemClickListener;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 
 
 public class MainActivity extends Activity implements OnItemClickListener {
+	
+	
 	TextView tv1;
 	ListView lv,lv2;
 	
@@ -75,6 +82,30 @@ public class MainActivity extends Activity implements OnItemClickListener {
        
         //Adding AdMob...
         
+		
+ 
+		//Locate the Banner Ad in activity_main.xml
+		AdView adView = (AdView) this.findViewById(R.id.adView);
+ 
+		// Request for Ads
+		AdRequest adRequest = new AdRequest.Builder()
+ 
+		// Add a test device to show Test Ads
+		
+		.addTestDevice("2181F924609987B5E1B7117BAB38E3DA")
+				.build();
+ 
+		// Load ads into Banner Ads
+		adView.loadAd(adRequest);
+ 
+		// Load ads into Interstitial Ads
+		
+ 
+		// Prepare an Interstitial Ad Listener
+		
+	
+	
+	
         ll=(LinearLayout)findViewById(R.id.adLayoutView);
         if (isNetworkAvailable(getBaseContext())) {
         	ll.setVisibility(LinearLayout.VISIBLE);
@@ -144,7 +175,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
         return true;
     }
     
+    
 */
+
+
+
     public boolean isNetworkAvailable(final Context context) {
         final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
         return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();

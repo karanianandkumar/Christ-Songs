@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -55,15 +55,13 @@
 	    android:orientation="vertical"
 	    
 	    >
-       <com.google.ads.AdView
-       android:id="@+id/adView"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-      
-       ads:adSize="SMART_BANNER"
-       ads:adUnitId="ca-app-pub-8547472950801728/9582034694"
-       ads:loadAdOnCreate="true"
-       ads:testDevices="TEST_EMULATOR, ZY2222XT6N"/>
+       
+       <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-8547472950801728/9582034694" />
         </LinearLayout>
     
 </LinearLayout>

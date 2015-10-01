@@ -168,7 +168,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
             
     }
 
-   /* @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
@@ -176,11 +176,22 @@ public class MainActivity extends Activity implements OnItemClickListener {
     }
     
     
-*/
 
 
 
-    public boolean isNetworkAvailable(final Context context) {
+
+    @Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+    	if(item.getItemId()==R.id.action_aboutus){
+    		Intent i=new Intent(this,About.class);
+    		startActivity(i);
+    		return true;
+    	}
+		return super.onOptionsItemSelected(item);
+	}
+
+	public boolean isNetworkAvailable(final Context context) {
         final ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
         return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }

@@ -231,34 +231,37 @@ containing a value of this type.
         public static final int icon=0x7f020021;
     }
     public static final class id {
-        public static final int LogoImage=0x7f06000c;
-        public static final int action_settings=0x7f06000d;
-        public static final int adLayoutView=0x7f060008;
-        public static final int adView=0x7f060009;
+        public static final int LogoImage=0x7f06000d;
+        public static final int aboutTV=0x7f060005;
+        public static final int action_aboutus=0x7f06000e;
+        public static final int adLayoutView=0x7f060009;
+        public static final int adView=0x7f06000a;
         public static final int hybrid=0x7f060004;
-        public static final int label=0x7f060005;
-        public static final int listView1=0x7f060006;
-        public static final int listView2=0x7f060007;
+        public static final int label=0x7f060006;
+        public static final int listView1=0x7f060007;
+        public static final int listView2=0x7f060008;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int satellite=0x7f060002;
-        public static final int scrollView1=0x7f06000a;
+        public static final int scrollView1=0x7f06000b;
         public static final int terrain=0x7f060003;
-        public static final int textView1=0x7f06000b;
+        public static final int textView1=0x7f06000c;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_listview=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int lyric_display=0x7f030002;
-        public static final int splashscreen=0x7f030003;
+        public static final int aboutus=0x7f030000;
+        public static final int activity_listview=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int lyric_display=0x7f030003;
+        public static final int splashscreen=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
     }
     public static final class string {
+        public static final int action_aboutus=0x7f07001d;
         public static final int action_settings=0x7f07001c;
         public static final int app_name=0x7f07001b;
         /**   Title for notification shown when GooglePlayServices needs to be
